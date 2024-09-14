@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="logo" title="Online Learning System">
+            <img src="CodeCatalysts logo.png" style="width:60px;height:60px;border-radius:50%;"  alt="">
+            <h2>My<span class="danger"> Dashboard</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="dashboard.html" class="active">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="timetable.html" onclick="timeTableAll()">
+                <span class="material-icons-sharp">today</span>
+                <h3>Time Table</h3>
+            </a> 
+            <a href="exam.html">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Examination</h3>
+            </a>
+            <a href="password.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="whiteboard.html">
+                <span class="material-icons-sharp" onclick="">logout</span>
+                <h3>My Classroom</h3>
+            </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+    </header>
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="t4.jpeg" alt="">
+                    </div>
+                    <div class="info" id="userInfo">
+                        <p>Hey, <b id="userName"></b> </p>
+                        <small class="text-muted" id="userContact"></small>
+                    </div>                    
+                </div>
+                <div class="about">
+                    <h5>Course</h5>
+                    <p>BTech. Computer Science & Engineering</p>
+                    <h5>Contact</h5>
+                    <p>1234567890</p>
+                    <h5>Email</h5>
+                    <p>unknown@gmail.com</p>
+                    <h5>Address</h5>
+                    <p>Lovely Professional University, Punjab</p>
+                </div>
+                <div class="sp1">
+                    <img class="calc" src="https://tse2.mm.bing.net/th?id=OIP._435CbtdTAeBSLMfw7i94QHaHa&pid=Api&P=0&h=180" onclick="toggleCalculatorPopup()"/>
+                </div>
+            
+                <div class="calculator-popup" id="calculatorPopup">
+                    <!-- Calculator content goes here -->
+                    <iframe src="Calculator.html" width="100%" height="100%" frameborder="0"></iframe>
+                </div><br><br><br>   
+                <a href="vsc.html"><div class="vsc">
+                <h2>Studio</h2><br>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.5JER921jBoBgWTSYlezzWwHaHa&pid=Api&rs=1&c=1&qlt=95&w=103&h=103"/>
+                </div></a>
+                <a href="https://www.engineergirl.org/55/Quizzes-And-Polls"><div class="vsc2">
+                    <h2>Quiz Time</h2><br>
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.CRURY1f9wMUZgf8nmOjNwQHaHa&pid=Api&P=0&h=180"/>
+                    </div></a>
+        </aside>    
+        </aside>
+
+        <main>
+            <h1>Progress</h1>
+            <div class="subjects">
+                <div class="eg">
+                    <span class="material-icons-sharp">code</span>
+                    <h3>Python</h3>
+                    <h2>12/14</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>86%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="mth">
+                    <span class="material-icons-sharp">functions</span>
+                    <h3>Mathematical Engineering</h3>
+                    <h2>27/29</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>93%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cs">
+                    <span class="material-icons-sharp">computer</span>
+                    <h3>Software Engineering</h3>
+                    <h2>24/25</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>81%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cg">
+                    <span class="material-icons-sharp">dns</span>
+                    <h3>Database Management</h3>
+                    <h2>27/30</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>96%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="net">
+                    <span class="material-icons-sharp">web</span>
+                    <h3>Web</h3>
+                    <h2>25/27</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>92%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+            </div>
+
+            <div class="timetable" id="timetable">
+                <div>
+                    <span id="prevDay">&lt;</span>
+                    <h2>Today's Timetable</h2>
+                    <span id="nextDay">&gt;</span>
+                </div>
+                <span class="closeBtn" onclick="timeTableAll()">X</span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Room No.</th>
+                            <th>Subject</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <div class="updates">
+                    <div class="message">
+                        <p> <b>Academic</b> Summer training internship with Live Projects.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Co-curricular</b> Global internship oportunity by Student organization.</p>
+                        <small class="text-muted">10 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Examination</b> Instructions for Mid Term Examination.</p>
+                        <small class="text-muted">Yesterday</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaves">
+                <h2>Know your Teachers:</h2>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="t1.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>Anjani Shukla</h3>
+                        <small class="text-muted">Engineering Mathematics</small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="t3.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>Amit Dhardwal</h3>
+                        <small class="text-muted">Python</small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="t2.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>Puja Kumari</h3>
+                        <small class="text-muted">DataBase Managment System</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="150" class="trust">
+        <h2>Trusted by 5,000+ Companies Worldwide.</h2><br><br>
+        <div class="trust_img">
+        <img src="google.png" style="width:130px;height:40px;"/>
+        <img src="netflix.png" style="width:130px;height:40px;"/>
+        <img src="airbnb.png" style="width:130px;height:40px;"/>
+        <img src="amazon.png" style="width:130px;height:40px;"/>
+        <img src="facebook.png" style="width:130px;height:40px;"/>
+        <img src="grab.png" style="width:130px;height:40px;"/>
+        </div>
+    </div><br><br>
+
+    <div data-aos="fade-up" data-aos-delay="150" class="catalyst">
+        <h2>What basically 'CodeCatalysts' is?</h2><br>
+        <p>CodeCatalysts is a platform that allows educators to interact directly with engineering students and make their journey one step forward towards serving his or her nation.
+             They can store the course materials online, manage assignments, quizzes and exams; monitor due dates, grade results and provide students with feedback all in one pace.</p>
+        <br>
+        <div class="catalyst_img">
+            <img src="instructor.jpg" style="width:380px;height:250px;"/><br><br><br><caption>&#128072;For Instructors:</caption><br><br><br><br><br><br>
+            <caption>For Students:&#128073;</caption><img src="student.jpg" style="width:380px;height:250px;"/>
+        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="150" class="physical">
+        <div class="hding">
+        <h2>Everything u can do in a physical classroom, you can do with CodeCatalysts...</h2>
+        <br>
+        <p>CodeCatalysts' software helps traditional and online managing of schedules, attendance, payments and virtual classrooms all in one secure cloud-based system.<br>
+            Also, this system of online education is becoming more and more prevalent in today's world where technology reigns supreme authority.<br>
+            Thereby students are able to get digital notes, doubt solving apps at their fingertips.
+        </p>
+        <br>
+        <a href="#">Learn more</a>
+        </div>
+        <div class="aside">
+        <img src="classroom.jpg"/>
+        <aside class="a1">.</aside>
+        <aside class="a2">.</aside>
+        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="150" class="interface">
+        <div class="interface_img">
+            <img src="group conference.jpg"/>
+        </div>
+        <div class="intrfc">
+            <h2>Everything u can do in a physical classroom, you can do with CodeCatalysts...</h2>
+            <br>
+            <p>Teachers don't get lost in the grid view and a dedicated podium space.<br>
+                CodeCatalysts' and presenters can be moved to the front of the class.<br>
+                Teachers can easily see out the student and class data at one time.
+            </p>
+    </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="150" class="girl">
+        <div class="girl_h">
+        <h2>For Teachers & Learners...</h2>
+        <br>
+        <p>Class has a dynamic set of teaching tools build to be displayed and used during classes.<br>
+        Teachers can handout assignments in real time for students to complete and submit.
+        </p>
+        <br>
+        </div>
+        <div class="girl_img">
+            <img src="choti.jpg"/>
+        </div>
+    </div>
+    
+    <div data-aos="fade-up" data-aos-delay="150" class="one">
+        <div class="one_img">
+            <a href="https://www.microsoft.com/en-in/microsoft-365/onedrive/online-cloud-storage"><img src="drive-removebg-preview.png"/></a>
+            <a href="https://www.dropbox.com/"><img src="box-removebg-preview.png"/></a>
+        </div>
+        <div class="one_img2">
+            <a href="https://www.google.com/drive/"><img src="googledrive-removebg-preview.png"/></a>
+            <a href="https://www.microsoft.com/en-in/microsoft-teams/join-a-meeting"><img src="microsoftteams-removebg-preview.png"/></a>
+        </div>
+        <div class="one_one">
+            <h2>200+ educational tools and plaform integrations...</h2>
+            <br>
+            <p>Schoology has every toolyour classroom needs and comes pre-integrated<br> and comes with more than 200+ tools, student informations and<br> collaboration with many education platforms.
+            </p>
+    </div>
+    </div>
+</section>
+
+    <section data-aos="fade-up" data-aos-delay="150" class="review" id="review">
+
+        <h1 class="heading"> Client's Reviews: </h1>
+
+        <div class="swiper review-slider" data-aos="zoom-in">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <img src="im1.jpg" alt="">
+                    <h3>Aditya Raj</h3>
+                    <p>We had the most amazing time – the best day of our lives. I cannot recommend her highly enough.
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="im2.jpg" alt="">
+                    <h3>Alekhya Reddy</h3>
+                    <p>I would like to thank you so much for officiating our wedding ceremony. We had an amazing day and
+                        everything worked out perfectly. The ceremony was beautiful and was exactly how we imagined it.
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="im3.jpg" alt="">
+                    <h3>Sahil </h3>
+                    <p>Just a little message to say a big thank you for everything you did for us on the lead up to the
+                        wedding and on the day itself. You were a star! We have had so many great comments about the day
+                        so again big thank yous!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="im4.jpg" alt="">
+                    <h3>Taiba Khan</h3>
+                    <p>We just wanted to say thank you so much for all of your help leading up to our wedding. You and
+                        your team were wonderful and made planning the wedding even more fun. We were so pleased with
+                        everything on the day. Thank you and we hope to see you soon.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div><br><br><br></section>
+
+        <h2 class="title">About Us</h2>
+        <div class="rev-section">
+            <div class="reviews">
+            
+            <div class="review">
+               <div class="head-review">
+                  <img src="Pic-1.jpg" width="250px">
+               </div>
+               <div class="body-review">
+                  <div class="name-review">Sneh Awasthi</div>
+                  <div class="place-review">India</div>
+                  <div class="desc-review">Leader of code catalysts</div>
+                  <div class="study-review">LOVELY PROFESSIONAL UNIVERSITY</div>
+                  <a href="https://www.instagram.com/sneh__awasthi" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/sneh-awasthi-09b42b2a3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:sneh.awasthi@gmail.com"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="review">
+               <div class="head-review">
+                  <img src="pic_2.jpg" width="250px">
+               </div>
+               <div class="body-review">
+                  <div class="name-review">Sayandip Jana</div>
+                  <div class="place-review">India</div>
+                  <div class="desc-review">Member of code catalysts</div>
+                  <div class="study-review">LOVELY PROFESSIONAL UNIVERSITY</div>
+                  <a href="https://www.instagram.com/sj_sayandip" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/jsayandip2003/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:sayandip.jana@gmail.com"><i class="fas fa-envelope"></i></a>
+               </div>
+            </div>
+            <div class="review">
+               <div class="head-review">
+                  <img src="pic_3.jpg" width="250px">
+               </div>
+               <div class="body-review">
+                  <div class="name-review">Ankit Basu</div>
+                  <div class="place-review">India</div>
+                  <div class="desc-review">Member of code catalysts</div>
+                  <div class="study-review">LOVELY PROFESSIONAL UNIVERSITY</div>
+                  <a href="https://www.instagram.com/_ank1t" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/ankit-basu-4a6774297/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:ankitbasu10@gmail.com"><i class="fas fa-envelope"></i></a>
+               </div>
+            </div>
+            <div class="review">
+               <div class="head-review">
+                  <img src="pic_4.jpg" width="250px">
+               </div>
+               <div class="body-review">
+                  <div class="name-review">Ankan Basu</div>
+                  <div class="place-review">India</div>
+                  <div class="desc-review">Member of code catalysts</div>
+                  <div class="study-review">LOVELY PROFESSIONAL UNIVERSITY</div>
+                  <a href="https://www.instagram.com/ank2n10" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/ankan-basu-595152271/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:ankanbasu10@gmail.com"><i class="fas fa-envelope"></i></a>
+               </div>
+            </div>
+            <div class="review">
+               <div class="head-review">
+                  <img src="pic_5.jpg" width="250px">
+               </div>
+               <div class="body-review">
+                  <div class="name-review">Sarthak Agnihotri</div>
+                  <div class="place-review">India</div>
+                  <div class="desc-review">Member of code catalysts</div>
+                  <div class="study-review">LOVELY PROFESSIONAL UNIVERSITY</div>
+                  <a href="https://www.instagram.com/sarthak agnihotri" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/sarthak-agnihotri" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:sarthak0144@gmail.com"><i class="fas fa-envelope"></i></a>
+               </div>
+            </div>
+            
+        </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section box1">
+                    <img class="ah1" src="instructor (2).jpg" alt="Instructor"><br>
+                    <h3>CODE CATALYST</h3><br>
+                    <a href="https://www.lpu.in/admission/lpu-in-your-town.php"><small>Locate us</small></a><br><br>
+                    <h4>Lovely Professional University</h4><br><br>
+                </div>
+                <div class="footer-section box2"><br>
+                    <img  src="Student (2).jpg" alt="Student"><br>
+                    <h3>Subscribe To Our Program</h3>
+                    <form>
+                        <input type="email" placeholder="Your email address"><br><br>
+                        <button type="submit">Subscribe</button><br><br>
+                        <button type="button" id="bt1">Review Us</button>
+                    </form><br>
+                </div>
+                <div class="footer-section box3"><br>
+                    <img src="User.jpg" alt="User"><br>
+                    <h3>Our Services</h3>
+                    <ul><br>
+                        <li>Email Marketing</li>
+                        <li>Campaigns</li>
+                        <li>Branding</li>
+                        <li>Offline Support</li>
+                    </ul><br>
+                </div><br>
+                <div class="footer-section box4"><br>
+                    <img src="Video.jpg" alt="Video"><br>
+                    <h3>Get Help</h3><br>
+                    <ul><br>
+                        <li>FAQs</li>
+                        <li>Contact Us</li>
+                    </ul><br>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><a href="#">Terms & Conditions</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+        </footer>
+        
+    <br><br>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="timeTable.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/e39720d1-00e1-46ec-98c8-dc0520481507/webchat/config.js" defer></script>
+</body>
+</html>

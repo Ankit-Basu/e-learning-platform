@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCatalysts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-…(integrity value)…" crossorigin="anonymous" />
+    <link rel="stylesheet" href="exit.css"/>
+</head>
+<body>
+    <div class="classroom" id="toggle-mode">
+        <div class="fas fa-moon" id="theme-btn"></div>
+    </div>
+    <div class="img">
+    <img class="logoz" src="CodeCatalysts logo.png"/> 
+    <h1>Welcome to CodeCatalysts</h1>
+    <h2>&hearts;..Transforming Engineering Education..&hearts;</h2>
+    <div class="tags">
+        <a href="sign_in.html"><button>Sign In</button></a>
+        <a href="sign_up.html"><button>Sign Up</button></a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let themeBtn = document.querySelector('#theme-btn');
+            let body = document.body;
+
+            themeBtn.onclick = () => {
+                themeBtn.classList.toggle('fa-moon');
+                themeBtn.classList.toggle('fa-sun');
+                body.classList.toggle('dark-mode');
+            };
+        });
+    </script>
+</body>
+</html>

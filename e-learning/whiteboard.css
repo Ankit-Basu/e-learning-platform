@@ -1,0 +1,486 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.main {
+    background-color: rgb(0, 0, 0);
+    border-radius: 2rem;
+    height: 100vh;
+}
+
+.header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 1.8rem;
+    margin-top: 3px;
+}
+
+.name {
+    display: flex;
+}
+
+.name h2 {
+    margin-top: 40px;
+}
+
+.logo1 {
+    margin: 10px 10px 0px 0px;
+    border-radius: 50%;
+}
+
+.classroom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.alyx {
+    display: flex;
+    align-items: center;
+}
+
+.alyx img {
+    margin-top: -15px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.alyx button {
+    background-color: transparent;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 1rem;
+    margin-top: -15px;
+    background: linear-gradient(to right, #dd00ff, #aa00ff);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.white {
+    background-color: rgb(38, 36, 36);
+    border-radius: 1.8rem;
+    width: 78%;
+    height: 86%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.record {
+    display: flex;
+    justify-content: space-around;
+}
+
+.present {
+    display: flex;
+    gap: 3rem;
+}
+
+.present img {
+    margin-left: -44px;
+    margin-top: 18px;
+}
+
+.logo2 {
+    display: flex;
+}
+
+.logo2 img {
+    margin-top: 16px;
+    margin-right: 5px;
+}
+
+.section {
+    width: 73%;
+    height: 470px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+.board {
+    border-radius: 2rem;
+}
+
+.notes {
+    position: absolute;
+    left: 200px;
+    bottom: 190px;
+}
+
+.logo3 {
+    position: absolute;
+    top: 370px;
+    left: 80px;
+}
+
+.sp1 {
+    position: relative;
+}
+
+.calc {
+    position: fixed;
+    top: 20px; 
+    left: 1540px; 
+    width: 70px; 
+    height: 70px; 
+    z-index: 999;
+    border-radius: 50%;
+    margin-left: 50px; 
+    cursor: pointer;
+    box-shadow: -5px 5px 10px rgb(134, 130, 130);
+}
+
+.calculator-popup {
+    display: none;
+    position: fixed;
+    top: 32%;
+    right: -10%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 20px rgb(134, 130, 130);
+}
+.calculator-popup iframe{
+    border-radius: 2rem;
+}
+
+.courses {
+    background-color: rgb(0, 0, 0);
+    margin-left: 940px;
+    margin-top: -470px;
+    width: 26%;
+    border-radius: 1.8rem;
+    border: 3px solid rgb(255, 255, 255);
+    height: 88.5%;
+    text-align: center;
+    overflow-y: scroll;
+    box-shadow: 0 0 20px white;
+}
+
+.cards {
+    border-radius: 1rem;
+    padding: 9px;
+    height: 195px;
+    overflow: hidden;
+}
+
+.courses::-webkit-scrollbar {
+    width: 0;
+}
+
+.cards h4 {
+    height: 0px;
+    margin-top: 10px;
+    margin-bottom: 32px;
+}
+
+.cards img {
+    border-radius: 1rem;
+    box-shadow: 0 0 20px white;
+}
+
+.cards button {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 1.5rem;
+    background: linear-gradient(to right, #3104c5, #b30ce7);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.foot {
+    background-color: rgb(38, 36, 36);
+    margin-top: -75px;
+    border-radius: 1.8rem;
+    width: 600px;
+    margin-left: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot img {
+    border-radius: 50%;
+    box-shadow: 0 0 20px white;
+}
+
+.students {
+    background-color: rgb(38, 36, 36);
+    border-radius: 1.8rem;
+    margin-left: 80%;
+    border: 3px solid rgb(255, 255, 255);
+    height: 86%;
+    margin-top: -50.5%;
+    text-align: center;
+    box-shadow: 0 0 20px white;
+}
+
+.prof {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main_prof {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_prof .stu {
+    margin-top: 0px;
+}
+
+.students button {
+    background-color: transparent;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 1.5rem;
+    background: linear-gradient(to top, #ff0019, #f9b0b0);
+    border-width: 2px;
+    border-style: solid;
+    margin-top: -10px;
+}
+
+.stu {
+    margin-top: 14px;
+}
+
+.prof span {
+    margin-left: -30px;
+    margin-top: 40px;
+}
+
+.main_prof span {
+    margin-left: -10px;
+    margin-top: 40px;
+}
+
+.dark-mode .main {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .header,
+.dark-mode .white,
+.dark-mode .foot,
+.dark-mode .students,
+.dark-mode .courses {
+    background-color: rgb(255, 255, 255);
+}
+
+.foot, .students, .courses, .cards, .stu {
+    transition: transform 0.3s ease-in-out;
+}
+
+.foot:hover, .students:hover, .courses:hover, .cards:hover, .stu:hover {
+    transform: scale(1.03); 
+}
+
+.cards img:hover, .alyx img:hover {
+    transform: scale(1.1); 
+}
+
+.prof,
+.prof1,
+.prof2,
+.exit-btn,
+.foot img,
+.logo3 {
+    transition: transform 0.15s ease-in-out;
+}
+
+.prof:hover,
+.prof1:hover,
+.prof2:hover,
+.exit-btn:hover,
+.foot img:hover,
+.logo3:hover {
+    transform: scale(1.14);
+}
+
+.alyx button,
+.exit-btn,
+.record button,
+.classroom i,
+#theme-btn,
+.header h4,
+.header img,
+.header i {
+    transition: transform 0.15s ease-in-out;
+}
+
+.alyx button:hover,
+.exit-btn:hover,
+.record button:hover,
+.classroom i:hover,
+#theme-btn:hover,
+.header h4:hover,
+.header img:hover,
+.header i:hover {
+    transform: scale(1.15);
+}
+
+.logo1,
+.codeco-logo,
+.header h2,
+.footer img,
+.footer i,
+.footer h4,
+.header h4 {
+    transition: transform 0.15s ease-in-out;
+}
+
+.logo1:hover,
+.codeco-logo:hover,
+.header h2:hover,
+.footer img:hover,
+.footer i:hover,
+.footer h4:hover,
+.header h4:hover {
+    transform: scale(1.15);
+}
+
+.record,
+#ld,
+.header h4,
+#in {
+    transition: transform 0.15s ease-in-out;
+}
+
+.record:hover,
+#ld:hover,
+.header h4:hover,
+#in:hover {
+    transform: scale(1.1);
+}
+
+.logo3 img,
+.header img,
+.header i,
+.codeco-logo {
+    transition: transform 0.15s ease-in-out;
+}
+
+.logo3 img:hover,
+.header img:hover,
+.header i:hover,
+.codeco-logo:hover {
+    transform: scale(1.15);
+}
+
+.footer img {
+    transition: transform 0.15s ease-in-out;
+}
+
+.footer img:hover {
+    transform: scale(1.15);
+}
+
+.foot img,
+.logo3 img {
+    transition: transform 0.1s ease-in-out;
+}
+
+.foot img:hover,
+.logo3 img:hover {
+    transform: scale(1.1);
+}
+
+
+@media only screen and (max-width: 432px) and (max-height: 932px) {
+    .header,
+    .record,
+    .white{
+        width:1300px;
+    }
+    .section,
+    .board{
+        width:1300px;
+    }
+    .notes{
+        width:950px;
+        margin-left:-20px;
+        margin-bottom:-260px;
+    }
+    .logo3{
+        margin-left:-10px;
+        margin-top:140px;
+    }
+    .courses{
+        margin-top:500px;
+        margin-left:50px;
+        overflow: scroll;
+    }
+    .students{
+        margin-top:240px;
+        margin-left:440px;
+        height: 710px;
+        width: 800px;
+        overflow: scroll;
+    }
+    .foot{
+        margin-top:-850px;
+        margin-left: 340px;
+    }
+}
+
+.courses {
+    text-align: center;
+    position: relative; /* Add position relative */
+    z-index: 1; /* Add z-index to bring it to the front */
+}
+
+.courses h3 {
+    position: relative; /* Add position relative */
+    z-index: 2; /* Add z-index to bring it to the front */
+    margin-top: 20px; /* Adjust the margin-top as needed */
+}
+
+.cards {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: -320px;
+    text-align: center;
+    position: relative;
+    height:400px;
+    width:280px;
+    margin-left: 14px;
+    background: #000000;
+    box-shadow: 0 0 10px white;
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: blur(5px);
+    transition: filter 0.5s ease-in-out;
+}
+
+.cards img.active {
+    filter: blur(0);
+}
+
+.content {
+    text-align: left;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.content h4 {
+    margin-bottom: 10px;
+}
+
+

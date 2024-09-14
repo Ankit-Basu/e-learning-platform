@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign_up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Welcome to CodeCatalysts!</h1>
+    <div class="container" id="container">
+        <div class="form-container log-in-container">
+            <form action="http://127.0.0.1:5501/dashboard.html">
+                <h2>Sign up</h2>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Address">
+                <select id="branch">
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="mechanical">Mechanical Engineering</option>
+                    <option value="electrical">Electrical Engineering</option>
+                    <option value="computer">Computer Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="chemical">Chemical Engineering</option>
+                </select>
+                <a href="dashboard.html"><button>Register</button></a>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <div class="dummy-image-container">
+                        <img src="Sign_Up.jpg" alt="Learning Benefits" style="width:400px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

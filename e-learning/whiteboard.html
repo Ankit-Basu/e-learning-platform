@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Whiteboard</title>
+    <link rel="stylesheet" href="whiteboard.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="name">
+                <img class="logo1" src="CodeCatalysts logo.png" height="90px" width="90px" alt="logo.jpg"/>
+                <h2 class="codeco-logo">CodeCatalysts</h2>
+            </div>
+            <div class="classroom" id="toggle-mode">
+                <div data-aos="zoom-in-left" data-aos-delay="1350" class="fas fa-moon" id="theme-btn"></div>               
+                <h4>Classroom</h4>
+            </div>
+            <div class="alyx">
+                <img src="professor.jpg" height="60px" width="57px" alt="logo.jpg"/>
+                <button><i class="fa-solid fa-users" style="color: #ffffff;"></i>&nbsp;Invite People</button>
+                <img src="hotspot.png" height="30px" width="30px" alt="logo.jpg"/>
+            </div>
+        </div>
+        <div class="white">
+            <div class="record">
+                <div class="present" id="in">
+                    <h4>Invited to Call:</h4><img src="https://tse4.mm.bing.net/th?id=OIP.H8KP5_E5dJ89YUXOdIGQfwHaHa&pid=Api&P=0&h=180" style="border-radius: 50%" height="25px" width="25px"/>
+                    <h4>Absent people:</h4><img src="https://tse2.mm.bing.net/th?id=OIP.hDi8ysWmED7_40T1tMuC0gHaHa&pid=Api&P=0&h=180" style="border-radius: 50%" height="24px" width="24px"/>
+                </div>
+                <div id="in" class="logo2">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.RoCwCtcGTwoVxb8-XPCerQAAAA&pid=Api&P=0&h=180" style="border-radius: 50%" height="30px" width="32px"/>
+                <h4>Record: 23:07</h4>
+                </div>
+                <h4 id="in">
+                    <i id="ld" class="fa-regular fa-floppy-disk" onclick="toggleItem()" style="color: rgb(245, 245, 245)"></i>
+                    &nbsp;&nbsp;Save
+                </h4>                
+            </div>
+            <div class="sp1">
+                <img class="calc" src="https://tse2.mm.bing.net/th?id=OIP._435CbtdTAeBSLMfw7i94QHaHa&pid=Api&P=0&h=180" onclick="toggleCalculatorPopup()"/>
+            </div>
+        
+            <div class="calculator-popup" id="calculatorPopup">
+                <!-- Calculator content goes here -->
+                <iframe src="Calculator.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <div class="section">
+                <img class="board" src="board.jpg"/>
+                <img class="notes" src="notes.jpg"/>
+                <img class="logo3" src="tools.jpg"/> 
+            </div>
+            <div class="courses">
+                <h3>Recommended Courses</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="cards">
+                                <img src="https://tse1.mm.bing.net/th?id=OIP.exxoPlPF2BMs_pYPKalwmQHaDt&pid=Api&P=0&h=180" alt="Course 1" class="active"/>
+                                <div class="content">
+                                    <h4>AI and ML: <button>Details</button></h4><br>
+                                    <p>Like a digital maestro, AI conducts the orchestra of possibilities, while ML tunes into the rhythm of patterns, composing a melody of innovation in the language of data.
+
+                                        In the vast canvas of technology, AI paints the strokes of imagination, while ML fills in the colors of adaptation, creating a masterpiece of automation and insight.
+                                        
+                                        As AI whispers the secrets of virtual intelligence, ML becomes the silent gardener, nurturing... the seeds of knowledge, blossoming into a garden of predictive blooms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cards">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGbMdFZ34oI2XcPhzpPAu7PXi4lPikzKULzw&usqp=CAU" alt="Course 2"/>
+                                <div class="content">
+                                    <h4>Ethical Hacking: <button>Details</button></h4><br>
+                                    <p>In the realm of cybersecurity, ethical hacking emerges as a virtuous force, employing skilled warriors to fortify digital defenses ethical hackers, akin to modern-day knights, 
+                                        leverage their expertise to identify vulnerabilities, ensuring a secure haven in the ever-evolving landscape of cyber threats. In this ethical quest for cybersecurity, 
+                                        these defenders stand guard... transforming hacking into a noble pursuit for the greater good....</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cards">
+                                <img src="https://tse3.mm.bing.net/th?id=OIP.-H4nw2IGG_1EOI3UM62bUgHaEK&pid=Api&P=0&h=180" alt="Course 3"/>
+                                <div class="content">
+                                    <h4>Python: <button>Details</button></h4><br>
+                                    <p>In the vast kingdom of programming, Python reigns as a versatile and elegant language, casting a spell of simplicity and power like magician's wand, 
+                                        Python effortlessly conjures solutions across domains, from web development to artificial intelligence. It's the wizard's language, where readability and flexibility combine,
+                                         making it a cherished ally for both beginners and... seasoned developers in crafting enchanting digital realms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="cards">
+                                <img src="https://tse3.mm.bing.net/th?id=OIP.W5nLxQ62eWdiHnY48PvdJwHaEL&pid=Api&P=0&h=180" alt="Course 4"/>
+                                <div class="content">
+                                    <h4>C Programming: <button>Details</button></h4><br>
+                                    <p>C is a powerful and versatile programming language known for its efficiency and close-to-hardware capabilities. Developed by Dennis Ritchie in the early 1970s,
+                                         C has influenced many other programming languages and serves as the foundation for operating systems like Unix. Its simplicity, combined with low-level memory 
+                                         manipulation features, makes... C an essential language for system programming, embedded systems, and application development.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foot">
+                <img src="dot.jpg" alt="tools.jpg"/>
+                <img src="mute1.jpg" alt="tools.jpg"/>
+                <img src="vedio.jpg" alt="tools.jpg"/>
+                <img src="mike.jpg" alt="tools.jpg"/>
+                <img src="bye.jpg" alt="tools.jpg"/>
+                <img src="rec.jpg" alt="tools.jpg"/>
+                <img src="slides.jpg" alt="tools.jpg"/>
+            </div>
+        </div>
+        <div class="students">
+            <h3>Lecturer(02)</h3>
+
+            <div class="main_prof">
+            <div class="prof1">
+            <img class="people" src="https://tse3.mm.bing.net/th?id=OIP.BYoqXM90_NbaCACbO70kLAHaHa&pid=Api&P=0&h=180" alt="people.jpg" height="70px" width="70px" style="border-radius: 50%"/><span><img src="green.jpg" style="border-radius: 50%"/></span>
+            <h4>Harvey McBlake</h4>
+                <img class="prof2" src="rvdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+                <img class="prof2" src="mte.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            </div>
+        </br>
+        <div class="prof1">
+            <img class="people" src="https://tse4.mm.bing.net/th?id=OIP.IFQlMDJK0N-NH2feQp9_ugHaJa&pid=Api&P=0&h=180" height="70px" width="65px" style="border-radius: 50%"/><span><img src="green.jpg" style="border-radius: 50%"/></span>
+            <h4>Sarthak JcBlaze</h4>
+            <img class="stu" src="vdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="mte.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div>
+        </div>
+        <h3>Students(49)</h3>
+        <div class="prof">
+            <img class="people" src="p12.jpg" height="60px" width="49px" style="border-radius: 50%"/><span><img src="green.jpg" style="border-radius: 50%"/></span>
+            <h4>Sayandip Jana</h4>
+            <img class="stu" src="vdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="mte.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div><hr>
+        <div class="prof">
+            <img class="people" src="p11.jpg" height="60px" width="49px" style="border-radius: 50%"/><span><img src="red.jpg" style="border-radius: 50%"/></span>
+            <h4>Ankit Basu</h4>
+            <img class="stu" src="rvdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="mte.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div><hr>
+        <div class="prof">
+            <img class="people" src="p10.jpg" height="60px" width="49px" style="border-radius: 50%"/><span><img src="green.jpg" style="border-radius: 50%"/></span>
+            <h4>Calyx Rodriguez</h4>
+            <img class="stu" src="vdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="mte.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div><hr>
+        <div class="prof">
+            <img class="people" src="p9.jpg" height="60px" width="49px" style="border-radius: 50%"/><span><img src="red.jpg" style="border-radius: 50%"/></span>
+            <h4>Alexa Dward</h4>
+            <img class="stu" src="rvdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="rmute.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div><hr>
+        <div class="prof">
+            <img class="people" src="p6.jpg" height="60px" width="49px" style="border-radius: 50%"/><span><img src="green.jpg" style="border-radius: 50%"/></span>
+            <h4>Maxy Plankton</h4>
+            <img class="stu" src="vdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="rmute.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div><hr>
+        <div class="prof">
+            <img class="people" src="p7.jpg" height="60px" width="49px" style="border-radius: 50%"/><span><img src="green.jpg" style="border-radius: 50%"/></span>
+            <h4>Zorey Rufy</h4>
+            <img class="stu" src="rvdo.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+            <img class="stu" src="mte.jpg" width="40px" height="40px" style="border-radius: 50%"/>
+        </div><br><br>
+        <a href="exit.html"><button class="exit-btn">Exit Classroom</button></a>
+        </div>
+    </div>
+    <script src="whiteboard.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/e39720d1-00e1-46ec-98c8-dc0520481507/webchat/config.js" defer></script>
+
+</body>
+</html>
